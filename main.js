@@ -45,11 +45,10 @@ buttonAddEl.addEventListener("click", () => {
   }
 });
 
-//clear field
-clearBtn.addEventListener("click", clearField);
+//clear field button
+clearBtn.addEventListener("click", clearInput);
 
-function clearField() {
+function clearInput() {
   inputEl.value = "";
   ulList.innerHTML = "";
-  console.log("cleaning");
 }
