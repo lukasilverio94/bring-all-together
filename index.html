@@ -16,6 +16,12 @@
         max-height: 230px;
         object-fit: contain;
       }
+
+      .msg-error {
+        color: red;
+        font-weight: 600;
+        font-size: 15px;
+      }
     </style>
     <title>Lucas Silverio - Tech Blog</title>
   </head>
@@ -211,11 +217,20 @@
         <h4 class="text-center text-danger pt-3 mt-3">
           What more you want to learn? Tell us bellow:
         </h4>
-        <div class="input-group">
-          <input class="form-control m-1 " type="text" name="name" id="input-add-content" />
-          <button class="btn btn-danger add-content-btn w-100">Add</button>
+        <p class="msg-error"></p>
+        <div class="input-group w-75">
+          <input
+            id="input-add-content"
+            class="form-control me-3"
+            type="text"
+            name="name"
+          />
+          <button class="btn btn-success add-content-btn me-3 rounded">
+            Add Suggestion
+          </button>
+          <button id="clear-btn" class="btn btn-danger rounded">Clear</button>
         </div>
-        <ul id="list-content-user"></ul>
+        <ul class="list-group ms-4" id="list-content-user"></ul>
 
         <!-- end topics -->
         <!-- form -->
