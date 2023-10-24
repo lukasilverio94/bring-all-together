@@ -49,7 +49,7 @@ function submitEvent(event) {
 }
 
 //Add content by user:
-buttonAddEl.addEventListener("click", () => {
+buttonAddEl.addEventListener("click", function() {
   if (inputEl.value === "" || inputEl.value.length <= 2) {
     msg.classList.add("msg-error");
     inputEl.value = "";
