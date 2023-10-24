@@ -1,4 +1,3 @@
-// Showing at a text which path the developer choose: (fullstack or frontend)
 //get form element
 const form = document.getElementById("form");
 //sign in feedback element
@@ -17,6 +16,19 @@ const msg = document.querySelector(".msg-error");
 //get clear button
 const clearBtn = document.querySelector("#clear-btn");
 
+//DATA for random phrases:
+const motivationPhrases = [
+  "Code your dreams into reality.",
+  "Unlock the power of the web with code.",
+  "The web is your canvas; code is your brush.",
+  "Learn to build, create, and innovate online.",
+  "Embrace the magic of web development.",
+  "Every line of code is a step towards mastery.",
+  "Websites are your playground; code is your toy.",
+  "Craft your digital future with web development.",
+  "Code your way to endless possibilities.",
+  "Web development is your key to a digital world.",
+];
 //Add an event listener to the forms submit button
 form.addEventListener("submit", submitEvent);
 
@@ -28,8 +40,12 @@ function submitEvent(event) {
     'input[name="flexRadioDefault"]:checked'
   ).value;
 
+  const randomIndex = Math.floor(Math.random() * motivationPhrases.length); //Random Number to loop data
+
+  const randomPhrase = motivationPhrases[randomIndex];
+  console.log(randomPhrase);
   //update the paragraph (empty for now, until click Sign in button!)
-  signInFeedBackText.textContent = `You choose to become a ${selectedValue}. Good Luck at the journey!`;
+  signInFeedBackText.textContent = `You will be a ${selectedValue}! ${randomPhrase}`;
 }
 
 //Add content by user:
