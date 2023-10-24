@@ -3,26 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <style>
-      img {
-        height: 100%;
-        width: 100%;
-        max-height: 230px;
-        object-fit: contain;
-      }
-
-      .msg-error {
-        color: red;
-        font-weight: 600;
-        font-size: 15px;
-      }
-    </style>
+    <!-- local css -->
+    <link rel="stylesheet" href="./style/style.css" />
     <title>Lucas Silverio - Tech Blog</title>
   </head>
   <body>
@@ -71,110 +60,178 @@
     <main>
       <div class="container py-4">
         <div id="about">
-          <h1 class="main_title text-center">About the blog</h1>
-          <h2 class="text-center pb-3">
-            We gonna talk about ... Web Development!
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eum
-            aliquid possimus debitis corrupti fuga fugit! Minus porro laboriosam
-            itaque deleniti, eveniet perspiciatis hic ab culpa dolorem nulla
-            saepe. Ullam!Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Quae eum aliquid possimus debitis corrupti fuga fugit! Minus
-            porro laboriosam itaque deleniti, eveniet perspiciatis hic ab culpa
-            dolorem nulla saepe. Ullam!Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Quae eum aliquid possimus debitis corrupti fuga
-            fugit! Minus porro laboriosam itaque deleniti, eveniet perspiciatis
-            hic ab culpa dolorem nulla saepe. Ullam!Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Quae eum aliquid possimus debitis
-            corrupti fuga fugit! Minus porro laboriosam itaque deleniti, eveniet
-            perspiciatis hic ab culpa dolorem nulla saepe. Ullam!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eum
-            aliquid possimus debitis corrupti fuga fugit! Minus porro laboriosam
-            itaque deleniti, eveniet perspiciatis hic ab culpa dolorem nulla
-            saepe. Ullam!Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Quae eum aliquid possimus debitis corrupti fuga fugit! Minus
-            porro laboriosam itaque deleniti, eveniet perspiciatis hic ab culpa
-            dolorem nulla saepe. Ullam!Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Quae eum aliquid possimus debitis corrupti fuga
-            fugit! Minus porro laboriosam itaque deleniti, eveniet perspiciatis
-            hic ab culpa dolorem nulla saepe. Ullam!Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Quae eum aliquid possimus debitis
-            corrupti fuga fugit! Minus porro laboriosam itaque deleniti, eveniet
-            perspiciatis hic ab culpa dolorem nulla saepe. Ullam!
-          </p>
-
-          <!-- card container -->
-
-          <div class="container">
-            <div class="row gy-3">
-              <div class="col-md-4">
-                <!-- card 1 -->
-                <div class="card h-100">
-                  <div class="card-img">
-                    <img
-                      src="img/react.png"
-                      class="card-img-top"
-                      alt="react logo"
-                    />
+          <section class="border-bottom border-dark-subtle border-3">
+            <h1 class="main_title text-center">About the blog</h1>
+            <h2 class="text-center pb-3">
+              We gonna talk about ... Web Development!
+            </h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Accusamus aut velit earum molestias labore, sed obcaecati deleniti
+              sequi asperiores eligendi, cumque aspernatur. Aliquid veniam
+              excepturi esse assumenda perferendis velit tempore, neque harum!
+              Totam officiis excepturi dolorum quis? Modi tempore nostrum quod
+              facere reiciendis eaque, exercitationem in unde itaque asperiores
+              sapiente. Modi blanditiis sit est porro dolores? Sapiente ex
+              libero saepe incidunt ratione! Harum nisi aperiam enim laborum
+              quasi perferendis fuga accusamus doloremque similique rem sed,
+              repellendus ipsa eum fugit iure? Temporibus beatae laboriosam,
+              reiciendis ducimus et quae facere repellendus enim esse, corrupti
+              sint odio quas quo reprehenderit alias error officia.
+            </p>
+          </section>
+          <!-- CONTAINER TABS USING JAVASCRIPT -->
+          <div class="container about-container pb-4">
+            <div class="row py-5">
+              <!-- COL IMG -->
+              <article class="col-md-5 rounded-1">
+                <img
+                  src="img/popular-language.webp"
+                  alt="about picture"
+                  class="img-fluid pb-2"
+                />
+              </article>
+              <!-- COL TEXT -->
+              <div class="col-md-6 container">
+                <article class="about">
+                  <!-- BUTTON GROUP CONTAINER -->
+                  <div class="btn-group w-100 pb-3">
+                    <button
+                      class="btn btn-secondary tab-btn active"
+                      data-id="history"
+                    >
+                      History
+                    </button>
+                    <button class="btn btn-secondary tab-btn" data-id="visions">
+                      Vision
+                    </button>
+                    <button class="btn btn-secondary tab-btn" data-id="goals">
+                      Goals
+                    </button>
                   </div>
-                  <div class="card-body">
-                    <h5 class="card-title">React</h5>
-                    <p class="card-text">
-                      React is a declarative, efficient, and flexible JavaScript
-                      library for building user interfaces. It lets you compose
-                      complex UIs from small and isolated pieces of code called
-                      “components”.
-                    </p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
+                  <!-- About Content (Text Area depending of active button) -->
+                  <article class="about-content">
+                    <!-- single item 1 -->
+                    <div id="history" class="content active">
+                      <h4>History</h4>
+                      <p>
+                        JavaScript is a bit like a stand-up comedian that tells
+                        jokes you don't always understand. It can turn "true"
+                        into "false" and add strings and numbers like a
+                        mathemagician on a caffeine high. It's a language that
+                        loves to surprise you, and sometimes, you can't help but
+                        laugh out of confusion. But once you get the punchline,
+                        you'll be the one making the web laugh!
+                      </p>
+                    </div>
+                    <!-- end single item 1 -->
+                    <!-- single item 2 -->
+                    <div id="visions" class="content">
+                      <h4>Visions</h4>
+                      <p>
+                        In JavaScript, you can learn to create dynamic and
+                        interactive web applications, from simple animations to
+                        complex data-driven interfaces. With it, you can develop
+                        everything from games and chat applications to
+                        user-friendly forms and responsive websites. JavaScript
+                        is the artist's palette of the web, allowing you to
+                        bring your creative visions to life with code.
+                      </p>
+                    </div>
+                    <!-- end single item 2 -->
+                    <!-- single item 3-->
+                    <div id="goals" class="content">
+                      <h4>Goals</h4>
+                      <p>
+                        In the world of web development, JavaScript serves as a
+                        versatile powerhouse with a multitude of goals it helps
+                        achieve. It enables developers to enhance user
+                        experiences by creating interactive websites, from
+                        animations to user-friendly forms. Data manipulation,
+                        real-time updates, and interactive data presentation
+                        become attainable through JavaScript. It plays a crucial
+                        role in crafting web applications, games, and even
+                        e-commerce platforms with secure transaction
+                        capabilities.
+                      </p>
+                    </div>
+                    <!-- end single item  3-->
+                  </article>
+                </article>
+              </div>
+            </div>
+            <!-- end row tabs -->
+          </div>
+          <!-- end container tabs -->
+        </div>
+        <!-- CARDS CONTAINER -->
+        <h3 class="text-center border-top border-dark-subtle border-3 py-4">Want to become a MERN Developer? Learn those: </h3>
+        <div class="container">
+          <div class="row gy-3">
+            <div class="col-md-4">
+              <!-- card 1 -->
+              <div class="card h-100">
+                <div class="card-img">
+                  <img
+                    src="img/react.png"
+                    class="card-img-top"
+                    alt="react logo"
+                  />
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">React</h5>
+                  <p class="card-text">
+                    React is a declarative, efficient, and flexible JavaScript
+                    library for building user interfaces. It lets you compose
+                    complex UIs from small and isolated pieces of code called
+                    “components”.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
               </div>
+            </div>
 
-              <div class="col-md-4">
-                <!-- card 2 -->
-                <div class="card h-100">
-                  <div class="card-img">
-                    <img
-                      src="img/nodejs.png"
-                      class="card-img-top"
-                      alt="nodejs logo"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">NodeJS</h5>
-                    <p class="card-text">
-                      Node. js (Node) is an open source, cross-platform runtime
-                      environment for executing JavaScript code. Node is used
-                      extensively for server-side programming, making
-                      extensively for server-side programming
-                    </p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
+            <div class="col-md-4">
+              <!-- card 2 -->
+              <div class="card h-100">
+                <div class="card-img">
+                  <img
+                    src="img/nodejs.png"
+                    class="card-img-top"
+                    alt="nodejs logo"
+                  />
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">NodeJS</h5>
+                  <p class="card-text">
+                    Node. js (Node) is an open source, cross-platform runtime
+                    environment for executing JavaScript code. Node is used
+                    extensively for server-side programming, making extensively
+                    for server-side programming
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
               </div>
-              <!-- card 3 -->
-              <div class="col-md-4">
-                <div class="card h-100">
-                  <div class="card-img">
-                    <img
-                      src="img/mongodb.png"
-                      class="card-img-top"
-                      alt="mongodb logo"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">MongoDB</h5>
-                    <p class="card-text">
-                      MongoDB is a non-relational document database that
-                      provides support for JSON-like storage. The MongoDB
-                      database has a flexible data model that enables you to
-                      store unstructured data
-                    </p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
+            </div>
+            <!-- card 3 -->
+            <div class="col-md-4">
+              <div class="card h-100">
+                <div class="card-img">
+                  <img
+                    src="img/mongodb.png"
+                    class="card-img-top"
+                    alt="mongodb logo"
+                  />
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">MongoDB</h5>
+                  <p class="card-text">
+                    MongoDB is a non-relational document database that provides
+                    support for JSON-like storage. The MongoDB database has a
+                    flexible data model that enables you to store unstructured
+                    data
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
               </div>
             </div>
@@ -212,6 +269,8 @@
             </tbody>
           </table>
         </div>
+
+        <!-- Javascript colors generation project -->
 
         <!-- list to manipulate DOM -->
         <h4 class="text-center text-danger py-2 mt-3">
@@ -341,5 +400,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="main.js"></script>
+    <script src="tabContent.js"></script>
   </body>
 </html>

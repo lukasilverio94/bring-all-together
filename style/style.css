@@ -1,0 +1,21 @@
+img {
+  height: 100%;
+  width: 100%;
+  max-height: 230px;
+  object-fit: contain;
+}
+
+.msg-error {
+  color: red;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* hide content */
+.content {
+  display: none;
+}
+
+.content.active {
+  display: block;
+}
