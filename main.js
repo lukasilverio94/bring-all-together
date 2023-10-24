@@ -34,8 +34,9 @@ function submitEvent(event) {
 
 //Add content by user:
 buttonAddEl.addEventListener("click", () => {
-  if (inputEl.value === "" || inputEl.value.length < 2) {
+  if (inputEl.value === "" || inputEl.value.length <= 2) {
     msg.classList.add("msg-error");
+    inputEl.value = "";
     msg.innerHTML = "Please enter some valid content...";
     setTimeout(() => msg.remove(), 2000);
   } else {
