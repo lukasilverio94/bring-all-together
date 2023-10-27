@@ -19,7 +19,7 @@
     <nav class="navbar navbar-expand-lg bg-dark p-2">
       <div class="container-fluid">
         <a class="navbar-brand text-light fw-bold fs-4" href="#"
-          ><img src="img/code.jpg" alt="logo" style="width: 60px;"
+          ><img src="img/code.jpg" alt="logo" style="width: 60px"
         /></a>
         <button
           class="navbar-toggler"
@@ -86,12 +86,14 @@
           <div class="container about-container pb-4">
             <div class="row py-5">
               <!-- COL IMG -->
-              <article class="col-md-5 rounded-1">
-                <img
-                  src="img/alien-language.jpg"
-                  alt="about picture"
-                  class="img-fluid"
-                />
+              <article class="col-md-5 col-sm-12 rounded-1">
+                <div class="container">
+                  <img
+                    src="img/alien-language.jpg"
+                    alt="about picture"
+                    class="img-fluid"
+                  />
+                </div>
               </article>
               <!-- COL TEXT -->
               <div class="col-md-6 container">
@@ -104,10 +106,16 @@
                     >
                       JavaScript
                     </button>
-                    <button class="btn btn-outline-dark tab-btn" data-id="learn">
+                    <button
+                      class="btn btn-outline-dark tab-btn"
+                      data-id="learn"
+                    >
                       Learn
                     </button>
-                    <button class="btn btn-outline-dark tab-btn" data-id="goals">
+                    <button
+                      class="btn btn-outline-dark tab-btn"
+                      data-id="goals"
+                    >
                       Goals
                     </button>
                   </div>
@@ -176,8 +184,11 @@
           <!-- end container tabs -->
         </div>
         <!-- CARDS CONTAINER -->
-        <h3 class="text-center text-bg-dark border-top border-dark-subtle border-3 py-4">
-          Do you want to become a <span class="text-danger fw-bold">MERN</span> Developer? Learn those:
+        <h3
+          class="text-center text-bg-dark border-top border-dark-subtle border-3 py-4"
+        >
+          Do you want to become a
+          <span class="text-danger fw-bold">MERN</span> Developer? Learn those:
         </h3>
         <div class="container">
           <div class="row gy-3">
@@ -398,6 +409,47 @@
           </div>
         </form>
       </div>
+
+      <!-- Accordion -->
+      <div
+        class="container accordion active-accordion bg-dark text-light py-3"
+      >
+        <h2 class="accordion-title text-center text-danger">Frequently Asked Questions</h2>
+
+        <!-- Content Container -->
+        <div class="container content-container w-50 m-auto py-2">
+          <div class="question">HTML/CSS are programming languages?</div>
+          <div class="answer pt-2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
+            eum magni suscipit, pariatur beatae consectetur ipsa atque delectus
+            quidem! Debitis!
+          </div>
+        </div>
+        <!-- end of content-container -->
+        <!-- Content Container -->
+        <div class="container content-container w-50 m-auto py-2">
+          <div class="question">
+            Why didn’t the 3 Little Piggies build a house underground?
+          </div>
+          <div class="answer pt-2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
+            eum magni suscipit, pariatur beatae consectetur ipsa atque delectus
+            quidem! Debitis!
+          </div>
+        </div>
+        <!-- end of content-container -->
+        <!-- Content Container -->
+        <div class="container content-container w-50 m-auto py-2">
+          <div class="question">Why the sky is blue?</div>
+          <div class="answer pt-2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
+            eum magni suscipit, pariatur beatae consectetur ipsa atque delectus
+            quidem! Debitis!
+          </div>
+        </div>
+        <!-- end of content-container -->
+      </div>
+      <!-- End of Accordion Div -->
     </main>
     <div class="w-100">
       <footer class="text-center bg-dark text-light py-4 mt-3">

@@ -18,16 +18,16 @@ const clearBtn = document.querySelector("#clear-btn");
 
 //DATA for random phrases:
 const motivationPhrases = [
-  "Code your dreams into reality.",
-  "Unlock the power of the web with code.",
-  "The web is your canvas; code is your brush.",
-  "Learn to build, create, and innovate online.",
-  "Embrace the magic of web development.",
-  "Every line of code is a step towards mastery.",
-  "Websites are your playground; code is your toy.",
-  "Craft your digital future with web development.",
-  "Code your way to endless possibilities.",
-  "Web development is your key to a digital world.",
+  "Code your dreams into reality. 😎",
+  "Unlock the power of the web with code. 😁",
+  "The web is your canvas; code is your brush. 🎈",
+  "Learn to build, create, and innovate online. 😉",
+  "Embrace the magic of web development. 🧠",
+  "Every line of code is a step towards mastery. 🙂",
+  "Websites are your playground; code is your toy. 🎈",
+  "Craft your digital future with web development. 🤑",
+  "Code your way to endless possibilities. 🤑",
+  "Web development is your key to a digital world. 🤩",
 ];
 //Add an event listener to the forms submit button
 form.addEventListener("submit", submitEvent);
@@ -43,13 +43,12 @@ function submitEvent(event) {
   const randomIndex = Math.floor(Math.random() * motivationPhrases.length); //Random Number to loop data
 
   const randomPhrase = motivationPhrases[randomIndex];
-  console.log(randomPhrase);
   //update the paragraph (empty for now, until click Sign in button!)
   signInFeedBackText.textContent = `You will be a ${selectedValue}! ${randomPhrase}`;
 }
 
 //Add content by user:
-buttonAddEl.addEventListener("click", function() {
+buttonAddEl.addEventListener("click", function () {
   if (inputEl.value === "" || inputEl.value.length <= 2) {
     msg.classList.add("msg-error");
     inputEl.value = "";
@@ -68,4 +67,14 @@ clearBtn.addEventListener("click", clearInput);
 function clearInput() {
   inputEl.value = "";
   ulList.innerHTML = "";
+}
+
+// FREQUENTLY ASKED QUESTIONS
+//container that is questions and answers
+const accordion = document.getElementsByClassName("content-container");
+
+for (let i = 0; i < accordion.length; i++) {
+  accordion[i].addEventListener("click", () => {
+    accordion[i].classList.toggle("active");
+  });
 }

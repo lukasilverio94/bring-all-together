@@ -19,3 +19,48 @@ img {
 .content.active {
   display: block;
 }
+
+/* accordion */
+.accordion .content-container .question {
+  padding: 8px 0;
+  font-size: 22px;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+.accordion .content-container .question::after {
+  content: " +";
+  position: absolute;
+  right: -2px;
+}
+
+.accordion .content-container .answer {
+  line-height: 1.5;
+  /* to hide, normal gonna overflow */
+  height: 0px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+/* Javascript Styling Link */
+.accordion .content-container.active .answer {
+  height: 150px;
+  margin-bottom: -70px;
+}
+
+.accordion .content-container.active .question {
+  transition: 0.5s;
+}
+
+.accordion .content-container.active .question::after {
+  content: "-";
+  font-size: 30px;
+  transition: 0.5s;
+}
+
+@media (max-width: 990px) {
+  .accordion .content-container.active .answer {
+    margin-bottom: 0;
+  }
+}
